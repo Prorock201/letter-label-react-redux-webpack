@@ -24,7 +24,7 @@ export default class Letter extends Component {
 								<td>{letter.title}</td>
 								<td>
 									{letter.labels.map((label,i) =>
-										<span key={i} className="label">{label}</span>
+										<span key={i} className='label'>{label}</span>
 									)}
 								</td>
 							</tr>

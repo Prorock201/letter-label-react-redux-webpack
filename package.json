@@ -1,7 +1,7 @@
 {
-  "name": "redux-ru-tutorial",
+  "name": "letter-label-redux",
   "version": "1.0.0",
-  "description": "Redux RU tutorial",
+  "description": "Letter Label Redux",
   "main": "index.js",
   "scripts": {
     "start": "node server.js"
