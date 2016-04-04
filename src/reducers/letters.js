@@ -1,4 +1,8 @@
-import {SELECT_LETTER, SET_LABEL, REMOVE_LABEL, REMOVE_LABEL_FROM_ALL_LETTERS} from '../constants/AppConst'
+import {
+	SELECT_LETTER, SET_LABEL,
+	REMOVE_LABEL,
+	REMOVE_LABEL_FROM_ALL_LETTERS
+} from '../constants/AppConst'
 
 const initialState = [
 	{

@@ -1,4 +1,4 @@
-import {ADD_NEW_LABEL,DELETE_LABEL} from '../constants/AppConst'
+import { ADD_NEW_LABEL, DELETE_LABEL } from '../constants/AppConst'
 
 const initialState = [
 	{

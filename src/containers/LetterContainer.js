@@ -9,13 +9,11 @@ class LetterContainer extends Component {
     return <Letter {...this.props} />
   }
 }
-
 function mapStateToProps(state) {
   return {
     letters: state.letters
   }
 }
-
 function mapDispatchToProps(dispatch) {
   return {
     LettersActions: bindActionCreators(LettersActions, dispatch)

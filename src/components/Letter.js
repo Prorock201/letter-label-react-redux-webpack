@@ -1,4 +1,4 @@
-import React, {PropTypes,Component} from 'react'
+import React, { PropTypes, Component } from 'react'
 
 export default class Letter extends Component {
 	selectLetter(id) {
@@ -23,9 +23,9 @@ export default class Letter extends Component {
 								<td><input type='checkbox' checked={letter.active} onChange={this.selectLetter.bind(this,letter.id)} /></td>
 								<td>{letter.title}</td>
 								<td>
-									{letter.labels.map((label,i) =>
+									{letter.labels.map((label,i) => (
 										<span key={i} className='label'>{label}</span>
-									)}
+									))}
 								</td>
 							</tr>
 						))}

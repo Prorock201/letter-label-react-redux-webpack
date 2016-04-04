@@ -1,8 +1,6 @@
 import { SELECT_LETTER } from '../constants/AppConst'
 
-export function selectLetter(id) {
-	return {
-		type: SELECT_LETTER,
-		id
-	}
-}
+export const selectLetter = (id) => ({
+	type: SELECT_LETTER,
+	id
+})
