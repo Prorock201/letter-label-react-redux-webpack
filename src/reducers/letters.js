@@ -9,7 +9,7 @@ const initialState = [
 		id: 1,
 		title: 'Letter from supervisor',
 		active: false,
-		labels: ['Work']
+		labels: []
 	},
 	{
 		id: 2,

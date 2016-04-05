@@ -1,4 +1,4 @@
-import { SELECT_LETTER, MARK_LABEL } from '../constants/AppConst'
+import { SELECT_LETTER, CHECK_LABEL } from '../constants/AppConst'
 
 export const selectLetter = (id) => ({
 	type: SELECT_LETTER,
@@ -8,7 +8,7 @@ export const selectLetter = (id) => ({
 export function checkLabel() {
   return (dispatch, getState) => {
 		dispatch({
-			type: MARK_LABEL,
+			type: CHECK_LABEL,
 			letters: getState().letters
 		})
   }
