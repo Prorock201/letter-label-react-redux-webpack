@@ -7,7 +7,6 @@ import './styles/app.css'
 import configureStore from './store/configureStore'
 
 require('bootstrap/dist/css/bootstrap.css')
-require('lodash')
 
 const store = configureStore()
 
