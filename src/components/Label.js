@@ -14,12 +14,14 @@ export default class Label extends Component {
     }
   }
   setLabel(label) {
-    let {setLabel} = this.props.LabelsActions;
+    let {setLabel,checkLabel} = this.props.LabelsActions;
     setLabel(label);
+    checkLabel();
   }
   removeLabel(label) {
-    let {removeLabel} = this.props.LabelsActions;
+    let {removeLabel,checkLabel} = this.props.LabelsActions;
     removeLabel(label);
+    checkLabel();
   }
   deleteLabel(index,title) {
     let {deleteLabel, removeLabelFromAllLetters} = this.props.LabelsActions;
@@ -35,7 +37,7 @@ export default class Label extends Component {
           <tbody>
             {labels.map((label,index) => (
               <tr key={label.id} style={{cursor: 'pointer'}}>
-                <td><i className='close' onClick={this.removeLabel.bind(this,label.title)}>&times;</i></td>
+                <td><i className='close' style={ label.active ? {} : {display: 'none'}} onClick={this.removeLabel.bind(this,label.title)}>&times;</i></td>
                 <td onClick={this.setLabel.bind(this,label.title)}>{label.title}</td>
                 <td><input type='button' value='Delete' onClick={this.deleteLabel.bind(this,index,label.title)}/></td>
               </tr>

@@ -2,8 +2,9 @@ import React, { PropTypes, Component } from 'react'
 
 export default class Letter extends Component {
 	selectLetter(id) {
-		let {selectLetter} = this.props.LettersActions;
+		let {selectLetter, checkLabel} = this.props.LettersActions;
 		selectLetter(id);
+		checkLabel();
 	}
   render() {
     const {letters} = this.props

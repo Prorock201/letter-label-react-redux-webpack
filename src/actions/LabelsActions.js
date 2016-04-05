@@ -3,7 +3,8 @@ import {
   REMOVE_LABEL,
   DELETE_LABEL,
   SET_LABEL,
-  REMOVE_LABEL_FROM_ALL_LETTERS
+  REMOVE_LABEL_FROM_ALL_LETTERS,
+  MARK_LABEL
 } from '../constants/AppConst'
 
 export const setLabel = (title) => ({
@@ -30,3 +31,12 @@ export const removeLabelFromAllLetters = (title) => ({
 	type: REMOVE_LABEL_FROM_ALL_LETTERS,
 	title
 })
+
+export function checkLabel() {
+  return (dispatch, getState) => {
+		dispatch({
+			type: MARK_LABEL,
+			letters: getState().letters
+		})
+  }
+}

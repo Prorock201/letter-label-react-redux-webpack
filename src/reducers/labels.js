@@ -1,4 +1,8 @@
-import { ADD_NEW_LABEL, DELETE_LABEL } from '../constants/AppConst'
+import {
+	ADD_NEW_LABEL,
+	DELETE_LABEL, 
+	MARK_LABEL
+} from '../constants/AppConst'
 
 const initialState = [
 	{
@@ -32,6 +36,19 @@ export default function labels(state = initialState, action) {
 			]
 		case DELETE_LABEL:
 			return [...state.slice(0,action.index),...state.slice(action.index+1)]
+		case MARK_LABEL:
+			return state.map(
+				(label) => 
+					Object.assign({}, label, {
+						active: (action.letters.some(
+						(letter) => 
+							letter.active && letter.labels.some( 
+								(letLab) => 
+									letLab === label.title
+							)
+						))
+					})
+			)
 		default:
 			return state
   }
