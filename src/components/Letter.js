@@ -37,5 +37,6 @@ export default class Letter extends Component {
 	}
 }
 Letter.propTypes = {
-  letters: PropTypes.array.isRequired
+  letters: PropTypes.array.isRequired,
+  LettersActions: PropTypes.objectOf(PropTypes.func.isRequired)
 }

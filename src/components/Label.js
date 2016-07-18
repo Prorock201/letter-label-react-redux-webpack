@@ -49,5 +49,6 @@ export default class Label extends Component {
   }
 }
 Label.propTypes = {
-  labels: PropTypes.array.isRequired
+  labels: PropTypes.array.isRequired,
+  LabelsActions: PropTypes.objectOf(PropTypes.func.isRequired)
 }
